@@ -1,34 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header.js';
-// import Home from './Home.js';
-// import Card from './components/Card.js';
 import ReactDOM from 'react-dom';
-import {Link, Route,Routes} from "react-router-dom";
 import axios from "axios";
-import { useEffect } from "react";
-// import apiRouter from '../../src/routers/apiRouter.js'
+import Search from './components/Search.js';
+import Home from './pages/Home.js';
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import SearchResult from "./pages/SearchResult";
+import {useEffect, useState} from "react";
 
 function App() {
+
+  const [ selectArea, setSelectArea ] = useState(null);
+  const [ selectMonth, setSelectMonth ] = useState(null);
 
   const getApi = async () => {
     axios.get("/api").then((res) => console.log(res.data));
   };
 
-  useEffect(() => {
-    getApi();
-  }, []);
+ useEffect(()=>{
+       console.log(selectArea);
+       console.log(selectMonth);
+       getApi();
+   },[selectArea,selectMonth])
 
   return (
     <div className="App">
-
-      <Header/>
+        <BrowserRouter>
+            <Header />
       
       {/* <Card/> */}
 
         {/* <Routes>
             <Route exact path="/" component={Home} />
         </Routes> */}
+            <Routes>
+                <Route exact path="/" element={<Home Area={selectArea} Month={selectMonth} setArea={setSelectArea} setMonth={setSelectMonth} />}>Home</Route>
+                <Route exact path="/search" element={<SearchResult />}>Home</Route>
+            </Routes>
+        </BrowserRouter>
     </div>
   );
 }

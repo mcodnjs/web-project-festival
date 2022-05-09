@@ -1,0 +1,39 @@
+.flex-item{
+    justify-content: center;
+}
+
+.magazine-card-container{
+    background-color: pink;
+    width : 675px;
+    height : 500px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+
+}
+
+.magazine-card-item{
+    width : 322.5px;
+    height : 235px;
+
+    background-color: #61dafb;
+}
+
+.more-button{
+    width : 675px;
+    height : 40px;
+
+    font-size :15px;
+    font-weight: lighter;
+    color:black;
+
+    border-radius: 50px;
+}
+
+.today-recommend-container{
+    width : 675px;
+    height : 500px;
+    background-color: lightgreen;
+}

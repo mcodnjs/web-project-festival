@@ -1,0 +1,92 @@
+.item{
+    display : flex;
+    position : relative;
+
+    width : 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line div{
+    width:0;
+    height :30px;
+    border : solid 0.5px lightgray;
+}
+
+.area{
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.item:hover{
+    background-color: darkgray;
+}
+
+.menu{
+    position :absolute;
+    top : 60px;
+    width : 300px;
+    height : 400px;
+
+    background-color: whitesmoke;
+}
+
+.menu ul{
+    padding : 0;
+    margin : 0;
+
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(7, 50px);
+}
+
+
+.menu ul li{
+    border-bottom : solid gray 0.1px;
+    border-collapse: collapse;
+    width : 150px;
+    height : 50px;
+    text-align: center;
+    vertical-align:  middle;
+}
+
+.menu ul li:hover{
+    background-color: darkgray;
+}
+
+
+.active{
+    visibility: visible;
+}
+
+.inactive{
+    visibility: hidden;
+}
+
+button{
+    border : none;
+}
+
+.searchButton{
+    width : 75px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.searchButton:hover{
+    background-color: darkgray;
+}
+
+.icon{
+    width : 20px;
+    height : 20px;
+}
+
