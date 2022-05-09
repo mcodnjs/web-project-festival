@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Header.css';
 import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
+import * as IoIcons from 'react-icons/io5';
+import { Navbar } from 'react-bootstrap';
+
 // 아이콘 컬러 전체 변경 기능
 import { IconContext } from 'react-icons';
 
@@ -16,23 +18,18 @@ function Header(props){
 
     return (
         <div>
-            <IconContext.Provider value={{ color: '#fff' }}>
-                {/* 네비게이션 토글 코드 */}
-                <div className="navbar">
-                    <a herf="/">
-                        <FaIcons.FaBars onClick={showSidebar} />
-                    </a>
-                </div>
-                {/* <nav className={sidebar ? 'nav-menu active' : 'nav-manu'}>
-                    <ui className="nav-menu-items" onClick={showSidebar}>
-                        <li className="navbar-toggle">
-                            <Link to="/" className="menu-bars">
-                                <AiIcons.AiOutlineClose />
-                            </Link>
-                        </li>
-                    </ui>
-                </nav>  */}
-            </IconContext.Provider>
+            <div class="container-fixed nav">
+                <IconContext.Provider value={{ color: '#000' }}>
+                    <FaIcons.FaBars class="nav-toggler nav-inner" onClick={showSidebar} />
+                    <a class="nav-title nav-inner">FESTI</a>
+                    <form class="nav-search nav-inner">
+                        <input class="search-input" type="search" placeholder="지역,행사명으로 검색하세요"></input>
+                        <button class="btn btn-outline-light" type="submit">
+                            <IoIcons.IoSearch class="" onClick={1} />
+                        </button>
+                    </form>
+                </IconContext.Provider>
+            </div>
         </div>
     )
 }
