@@ -1,4 +1,3 @@
-import Header from '../components/Header.js';
 import Search from "../components/Search";
 import styled from 'styled-components';
 import '../styles/Home.css';
@@ -31,8 +30,7 @@ const defaultData = {
     ],
 };
 
-function Home(){
-
+function Home( {Area, Month, setArea, setMonth} ){
 
     const [ magazine, setMagazine ] = useState(null);
 
@@ -46,21 +44,14 @@ function Home(){
         console.log(magazine);
     },[magazine])
 
-    {
-        if(magazine !== null){
-
-        }
-    }
-
     return(
         <div>
-            <Header />
             <Main>
                 <div>
                     <Title>함께 떠나볼까요?</Title>
                 </div>
                 <div className={"flex-item"}>
-                    <Search />
+                    <Search setArea={setArea} setMonth={setMonth} Area={Area} Month={Month}/>
                 </div>
 
                 <section>

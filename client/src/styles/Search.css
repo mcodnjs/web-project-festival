@@ -3,19 +3,38 @@
     position : relative;
 
     width : 300px;
-    border-radius: 50px;
-    background-color: #1a83ff;
     justify-content: center;
     align-items: center;
+}
+
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line div{
+    width:0;
+    height :30px;
+    border : solid 0.5px lightgray;
+}
+
+.area{
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.item:hover{
+    background-color: darkgray;
 }
 
 .menu{
     position :absolute;
     top : 60px;
     width : 300px;
-    height : 350px;
+    height : 400px;
 
-    background-color: pink;
+    background-color: whitesmoke;
 }
 
 .menu ul{
@@ -31,10 +50,16 @@
 
 
 .menu ul li{
+    border-bottom : solid gray 0.1px;
+    border-collapse: collapse;
     width : 150px;
     height : 50px;
     text-align: center;
     vertical-align:  middle;
+}
+
+.menu ul li:hover{
+    background-color: darkgray;
 }
 
 
@@ -52,7 +77,12 @@ button{
 
 .searchButton{
     width : 75px;
-    border-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.searchButton:hover{
+    background-color: darkgray;
 }
 
 .icon{
