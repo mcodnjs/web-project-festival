@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { connect, useSelector, useDispatch, } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
-import './Header.css';
+import '../styles/Header.css';
 import * as FaIcons from 'react-icons/fa';
 import * as IoIcons from 'react-icons/io5';
 import { Navbar } from 'react-bootstrap';

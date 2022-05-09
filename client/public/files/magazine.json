@@ -1,0 +1,28 @@
+{
+  "status": 200,
+  "message": "",
+  "result": true,
+  "data": {
+    "title": "magazine",
+    "contents": [
+      {
+        "mTitle": "balloon",
+        "mContent" : "balloon is good!",
+        "mImage": "../img/contents/mcard_balloon.jpg",
+        "likeCount" : 0
+      },
+      {
+        "mTitle": "concert",
+        "mContent" : "concert is good!",
+        "mImage": "../img/contents/mcard_concert.jpg",
+        "likeCount" : 0
+      },
+      {
+        "mTitle": "crowd",
+        "mContent" : "crowd is good!",
+        "mImage": "../img/contents/mcard_crowd.jpg",
+        "likeCount" : 0
+      }
+    ]
+  }
+}

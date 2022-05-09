@@ -2,15 +2,15 @@ import Header from '../components/Header.js';
 import Search from "../components/Search";
 import styled from 'styled-components';
 import '../styles/Home.css';
+import {useEffect, useState} from "react";
 
 const Main = styled.div`
-    width : 100vw;
-    height : 100vh; 
+    width : 100%;
+    height : 100%; 
   
     display: flex;
     flex-direction: column;
     align-items: center;
-
 `;
 
 const Title = styled.h1`
@@ -19,7 +19,39 @@ const Title = styled.h1`
   font-weight: lighter;
 `;
 
+const defaultData = {
+    title: 'defaultTitle',
+    contents: [
+        {
+            mTitle: "",
+            mContent: "",
+            mImage: "",
+            likeCount: 0
+        }
+    ],
+};
+
 function Home(){
+
+
+    const [ magazine, setMagazine ] = useState(null);
+
+    useEffect(() => {
+        fetch('/files/magazine.json')
+            .then(res => res.json())
+            .then(res => setMagazine(()=>res.data));
+    },[]);
+
+    useEffect( () => {
+        console.log(magazine);
+    },[magazine])
+
+    {
+        if(magazine !== null){
+
+        }
+    }
+
     return(
         <div>
             <Header />
@@ -31,12 +63,33 @@ function Home(){
                     <Search />
                 </div>
 
-                <div>
+                <section>
                     {/* 매거진 / 기획전*/}
                     <Title>매거진 / 기획전</Title>
+                    <div className={"magazine-card-container"}>
+                        <div className={"magazine-card-item"}>
+                            card1
+                        </div>
+                        <div className={"magazine-card-item"}>
+                            card2
+                        </div>
+                        <div className={"magazine-card-item"}>
+                            card3
+                        </div>
+                        <div className={"magazine-card-item"}>
+                            card4
+                        </div>
+                    </div>
 
-               </div>
+                    <button className={"more-button"}>더보기</button>
+               </section>
+
+                <section className={"today-recommend-container"}>
+                    {/* 오늘의 추천 */}
+                    <Title>오늘의 추천</Title>
+                </section>
             </Main>
+
 
         </div>
     );
