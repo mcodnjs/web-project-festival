@@ -21,7 +21,7 @@ function Header(props){
             <div class="container-fixed nav">
                 <IconContext.Provider value={{ color: '#000' }}>
                     <FaIcons.FaBars class="nav-toggler nav-inner" onClick={showSidebar} />
-                    <a class="nav-title nav-inner">FESTI</a>
+                    <a href="/" class="nav-title nav-inner">FESTI</a>
                     <form class="nav-search nav-inner">
                         <input class="search-input" type="search" placeholder="지역,행사명으로 검색하세요"></input>
                         <button class="btn btn-outline-light" type="submit">

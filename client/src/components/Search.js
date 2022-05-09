@@ -8,7 +8,7 @@ const SearchContainer = styled.div`
   display: flex;
   background-color: whitesmoke;
   width : 675px;
-  height : 75px;
+  height : 50px;
   border-radius: 50px;
 `;
 
