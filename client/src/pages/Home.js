@@ -80,8 +80,6 @@ function Home( {Area, Month, setArea, setMonth} ){
                     <Title>오늘의 추천</Title>
                 </section>
             </Main>
-
-
         </div>
     );
 }

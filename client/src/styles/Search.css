@@ -76,9 +76,14 @@ button{
 }
 
 .searchButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width : 75px;
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
+    color : black;
 }
 
 .searchButton:hover{

@@ -11,8 +11,8 @@ import {useEffect, useState} from "react";
 
 function App() {
 
-  const [ selectArea, setSelectArea ] = useState(null);
-  const [ selectMonth, setSelectMonth ] = useState(null);
+  const [ selectArea, setSelectArea ] = useState("지역");
+  const [ selectMonth, setSelectMonth ] = useState("날짜");
 
   const getApi = async () => {
     axios.get("/api").then((res) => console.log(res.data));
@@ -28,7 +28,7 @@ function App() {
     <div className="App">
         <BrowserRouter>
             <Header />
-      
+
       {/* <Card/> */}
 
         {/* <Routes>
