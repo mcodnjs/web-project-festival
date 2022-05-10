@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import '../styles/Home.css';
 import {useEffect, useState} from "react";
 import Magazine from "../components/Magazine";
+import Card from "../components/Card";
 
 const Main = styled.div`
     width : 100%;
@@ -73,6 +74,7 @@ function Home( {Area, Month, setArea, setMonth} ){
                 <section className={"today-recommend-container"}>
                     {/* 오늘의 추천 */}
                     <Title>오늘의 추천</Title>
+                    <Card />
                 </section>
             </Main>
         </div>

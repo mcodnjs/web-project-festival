@@ -39,6 +39,6 @@
 
 .today-recommend-container{
     width : 675px;
-    height : 500px;
-    background-color: lightgreen;
+    height : 100%;
+    background-color: lightgrey;
 }

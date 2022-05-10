@@ -8,6 +8,7 @@ import Home from './pages/Home.js';
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import SearchResult from "./pages/SearchResult";
 import {useEffect, useState} from "react";
+import {Card} from "react-bootstrap";
 
 function App() {
 
@@ -28,8 +29,6 @@ function App() {
     <div className="App">
         <BrowserRouter>
             <Header />
-
-      {/* <Card/> */}
 
         {/* <Routes>
             <Route exact path="/" component={Home} />
