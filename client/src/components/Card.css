@@ -1,0 +1,52 @@
+.outer {
+    text-align: center;
+}
+
+.div-card {
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    display: inline-block;
+}
+
+.card-inner{
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.166);
+    border-radius: 0.7rem;
+}
+
+.card-info {
+    height: 8rem;
+}
+
+.card-info>div {
+    margin: 15px;
+}
+.card-info-left{
+    text-align: left;
+}
+.card-info-right{
+    position: relative;
+    bottom: 60px;
+    text-align: right;
+}
+.card-title{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.card-text{
+    margin-left: 0.3rem;
+    font-weight: 400;
+}
+.card-price{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.card-info-love{
+    font-size: 1.3rem;
+}
+.card-hashtag{
+    font-size: 1.1rem;
+    color: #395cdf;
+    margin-right: 0.4rem;
+}
