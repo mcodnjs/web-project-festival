@@ -2,6 +2,12 @@
     justify-content: center;
 }
 
+.magazine-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
 .magazine-card-container{
     background-color: pink;
     width : 675px;
@@ -11,7 +17,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-
 }
 
 .magazine-card-item{

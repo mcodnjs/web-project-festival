@@ -14,7 +14,7 @@ const SearchContainer = styled.div`
 `;
 
 const areaList = ["전체","서울", "경기", "인천", "부산", "광주", "대구", "대전", "울산", "제주", "강원", "전남", "전북", "경북", "경남" ];
-const dateList = ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월" ];
+const dateList = ["전체","1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월" ];
 
 
 function Search( {Area, Month, setArea, setMonth}){

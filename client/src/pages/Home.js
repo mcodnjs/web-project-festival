@@ -2,6 +2,7 @@ import Search from "../components/Search";
 import styled from 'styled-components';
 import '../styles/Home.css';
 import {useEffect, useState} from "react";
+import Magazine from "../components/Magazine";
 
 const Main = styled.div`
     width : 100%;
@@ -37,7 +38,7 @@ function Home( {Area, Month, setArea, setMonth} ){
     useEffect(() => {
         fetch('/files/magazine.json')
             .then(res => res.json())
-            .then(res => setMagazine(()=>res.data));
+            .then(res => setMagazine(()=>res.data.contents));
     },[]);
 
     useEffect( () => {
@@ -58,18 +59,12 @@ function Home( {Area, Month, setArea, setMonth} ){
                     {/* 매거진 / 기획전*/}
                     <Title>매거진 / 기획전</Title>
                     <div className={"magazine-card-container"}>
-                        <div className={"magazine-card-item"}>
-                            card1
-                        </div>
-                        <div className={"magazine-card-item"}>
-                            card2
-                        </div>
-                        <div className={"magazine-card-item"}>
-                            card3
-                        </div>
-                        <div className={"magazine-card-item"}>
-                            card4
-                        </div>
+                        {
+                            magazine !== null ? magazine.map( (item, index) =>
+                                <div key={index} className={"magazine-card-item"}>
+                                <Magazine imgUrl={item.mImage} Title={item.mTitle} Content={item.mContent} likeCount={item.likeCount}/>
+                            </div>) :<></>
+                        }
                     </div>
 
                     <button className={"more-button"}>더보기</button>

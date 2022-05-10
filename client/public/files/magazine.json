@@ -9,19 +9,19 @@
         "mTitle": "balloon",
         "mContent" : "balloon is good!",
         "mImage": "../img/contents/mcard_balloon.jpg",
-        "likeCount" : 0
+        "likeCount" : 20
       },
       {
         "mTitle": "concert",
         "mContent" : "concert is good!",
         "mImage": "../img/contents/mcard_concert.jpg",
-        "likeCount" : 0
+        "likeCount" : 5
       },
       {
         "mTitle": "crowd",
         "mContent" : "crowd is good!",
         "mImage": "../img/contents/mcard_crowd.jpg",
-        "likeCount" : 0
+        "likeCount" : 10
       }
     ]
   }
