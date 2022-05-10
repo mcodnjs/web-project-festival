@@ -4,6 +4,15 @@
   height : 100vh;
 }
 
+.nav-toggle-view{
+  background-color: orange;
+  position: absolute;
+  top:0;
+
+  width: 400px;
+  height: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

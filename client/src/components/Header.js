@@ -10,21 +10,20 @@ import { Navbar } from 'react-bootstrap';
 // 아이콘 컬러 전체 변경 기능
 import { IconContext } from 'react-icons';
 
-function Header(props){
-    const [sidebar, setSidebar] = useState(false);
+function Header({showSidebar}){
 
-    const showSidebar = () => setSidebar(!sidebar);
     // not sidebar로 설정함
 
     return (
-        <div>
-            <div class="container-fixed nav">
+        <div className={"header-nav-container"}>
+            <div className="nav">
                 <IconContext.Provider value={{ color: '#000' }}>
-                    <FaIcons.FaBars class="nav-toggler nav-inner" onClick={showSidebar} />
-                    <a href="/" class="nav-title nav-inner">FESTI</a>
-                    <form class="nav-search nav-inner">
-                        <input class="search-input" type="search" placeholder="지역,행사명으로 검색하세요"></input>
-                        <button class="btn btn-outline-light" type="submit">
+                    <FaIcons.FaBars className={`nav-item`} onClick={showSidebar} />
+
+                    <a href="/" className="nav-title nav-inner nav-item">FESTI</a>
+                    <form className="nav-search nav-inner nav-item">
+                        <input className="search-input" type="search" placeholder="지역,행사명으로 검색하세요" />
+                        <button className="btn btn-outline-light" type="submit">
                             <IoIcons.IoSearch class="" onClick={1} />
                         </button>
                     </form>

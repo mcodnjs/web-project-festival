@@ -4,6 +4,7 @@ import '../styles/Home.css';
 import {useEffect, useState} from "react";
 import Magazine from "../components/Magazine";
 import Card from "../components/Card";
+import * as FaIcons from "react-icons/fa";
 
 const Main = styled.div`
     width : 100%;
@@ -32,7 +33,7 @@ const defaultData = {
     ],
 };
 
-function Home( {Area, Month, setArea, setMonth} ){
+function Home( {Area, Month, setArea, setMonth, sidebar, showSidebar} ){
 
     const [ magazine, setMagazine ] = useState(null);
 
@@ -46,6 +47,10 @@ function Home( {Area, Month, setArea, setMonth} ){
         console.log(magazine);
     },[magazine])
 
+    useEffect( () => {
+        console.log("sidebar",sidebar);
+    },[sidebar])
+
     return(
         <div>
             <Main>
@@ -54,6 +59,13 @@ function Home( {Area, Month, setArea, setMonth} ){
                 </div>
                 <div className={"flex-item"}>
                     <Search setArea={setArea} setMonth={setMonth} Area={Area} Month={Month}/>
+                    <div className={`nav-side-bar ${sidebar ? "nav-side-view" : "nav-side-hidden"}`}>
+                        <div className={"nav-top-container"}>
+                            <FaIcons.FaBars className={"nav-bar nav-item"} onClick={showSidebar} />
+                            <span className={"nav-title nav-inner nav-item"}>FESTI</span>
+                        </div>
+
+                    </div>
                 </div>
 
                 <section>
