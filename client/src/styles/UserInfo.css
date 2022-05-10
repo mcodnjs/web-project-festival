@@ -1,0 +1,28 @@
+.user-info-container{
+    display: flex;
+}
+
+.user-info-inner-container{
+    width: 400px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user-info-inner-container div{
+    margin-left: 20px;
+    margin-top :20px;
+}
+
+.nav-bar-hidden-icon{
+    width : 30px;
+    height: 30px;
+
+    position: absolute;
+    top :0;
+    right :0;
+
+    margin : 10px;
+
+}

@@ -5,6 +5,8 @@ import {useEffect, useState} from "react";
 import Magazine from "../components/Magazine";
 import Card from "../components/Card";
 import * as FaIcons from "react-icons/fa";
+import NavBar from "../components/NavBar";
+import {setSelectionRange} from "@testing-library/user-event/dist/utils";
 
 const Main = styled.div`
     width : 100%;
@@ -33,7 +35,7 @@ const defaultData = {
     ],
 };
 
-function Home( {Area, Month, setArea, setMonth, sidebar, showSidebar} ){
+function Home( {Area, Month, setArea, setMonth, sidebar, showSidebar, user, setSidebar} ){
 
     const [ magazine, setMagazine ] = useState(null);
 
@@ -47,9 +49,9 @@ function Home( {Area, Month, setArea, setMonth, sidebar, showSidebar} ){
         console.log(magazine);
     },[magazine])
 
-    useEffect( () => {
-        console.log("sidebar",sidebar);
-    },[sidebar])
+    // useEffect( () => {
+    //     console.log("sidebar",sidebar);
+    // },[sidebar])
 
     return(
         <div>
@@ -59,13 +61,7 @@ function Home( {Area, Month, setArea, setMonth, sidebar, showSidebar} ){
                 </div>
                 <div className={"flex-item"}>
                     <Search setArea={setArea} setMonth={setMonth} Area={Area} Month={Month}/>
-                    <div className={`nav-side-bar ${sidebar ? "nav-side-view" : "nav-side-hidden"}`}>
-                        <div className={"nav-top-container"}>
-                            <FaIcons.FaBars className={"nav-bar nav-item"} onClick={showSidebar} />
-                            <span className={"nav-title nav-inner nav-item"}>FESTI</span>
-                        </div>
-
-                    </div>
+                    <NavBar sidebar={sidebar} user={user} setSidebar={setSidebar}/>
                 </div>
 
                 <section>

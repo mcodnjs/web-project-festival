@@ -19,7 +19,7 @@ const Select = styled.div`
   align-items: center;
 `;
 
-function SearchResult(){
+function SearchResult({showSidebar, sidebar}){
 
     const active = true;
 
@@ -65,6 +65,7 @@ function SearchResult(){
     return(
      <div className={"outer-container"}>
          <div className={"inner-container"}>
+
              {/* 선택된 지역, 날짜*/}
              <div className={"select-container"}>
                  <Select>{ area !== "지역" ? area : "지역 미선택"}</Select>

@@ -24,7 +24,7 @@ function Header({showSidebar}){
                     <form className="nav-search nav-inner nav-item">
                         <input className="search-input" type="search" placeholder="지역,행사명으로 검색하세요" />
                         <button className="btn btn-outline-light" type="submit">
-                            <IoIcons.IoSearch class="" onClick={1} />
+                            <IoIcons.IoSearch className="" onClick={()=>alert(1)} />
                         </button>
                     </form>
                 </IconContext.Provider>
